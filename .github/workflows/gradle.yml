@@ -24,7 +24,7 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: ReportGenerator
-      uses: danielpalme/ReportGenerator-GitHub-Action@4.5.2
+    - name: Test with Gradle
+      uses: ./gradlew test
     - name: Codecov
       uses: codecov/codecov-action@v1.0.6
