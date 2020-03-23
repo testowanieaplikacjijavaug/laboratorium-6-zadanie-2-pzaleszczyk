@@ -169,6 +169,17 @@ public class FriendshipsTest {
         assertThat(friends.areFriends("Tomek", "a"), is(false));
     }
 
+    @Test
+    public void Testgetfriendlistnull() {
+    	 try {
+       		friends.getFriendsList(null);
+     	}catch(Exception e){
+     		assertThat(e,instanceOf(IllegalArgumentException.class));
+     		return;
+     	}
+     	//Else fail
+     	assertThat(true,is(false));
+    }
 
 
     @Test
